@@ -49,7 +49,7 @@ in
     packages = with pkgs; [];
   };
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  programs.sway.enable = true;
   users.defaultUserShell = pkgs.fish;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -66,8 +66,8 @@ in
      stable.speechd
      stable.cmatrix
      unstable.sway
-     stable.dissent
      unstable.foot
+     stable.webcord
      stable.gnome-disk-utility
      stable.fastfetch
      stable.zellij
