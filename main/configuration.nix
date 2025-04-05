@@ -1,24 +1,39 @@
-# Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{config, pkgs, inputs, lib, ... }:
 let
     unstable = inputs.unstablenixpkgs.legacyPackages.${pkgs.system};
-    stable = inputs.nixpkgs.legacyPackages.${pkgs.system};
     old= inputs.veryoldnixpkgs.legacyPackages.${pkgs.system};
-
 in
 {
-
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
   services.xserver.enable = true;
+  programs.steam.enable = true;
+  hardware.opengl = {
+    enable = true;
+    
+    # Intel-specific packages
+    extraPackages = with pkgs; [
+      intel-media-driver  # VAAPI driver
+      intel-compute-runtime  # OpenCL runtime
+      vaapiIntel  # VAAPI support
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
+  nixpkgs.config.allowUnfree = true;
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
+  services.flatpak.enable = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -40,7 +55,6 @@ in
     layout = "us";
     variant = "";
   };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.omnia = {
     isNormalUser = true;
@@ -49,59 +63,60 @@ in
     packages = with pkgs; [];
   };
   # Allow unfree packages
-  programs.sway.enable = true;
   users.defaultUserShell = pkgs.fish;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-     stable.vim
+     vim
      unstable.git
-     stable.wofi
-     stable.tmux
+     wofi
+     tmux
      unstable.kitty
      unstable.xfce.thunar
-     stable.yazi
-     stable.speechd
-     stable.cmatrix
+     yazi
+     speechd
+     cmatrix
      unstable.sway
      unstable.foot
-     stable.webcord
-     stable.gnome-disk-utility
-     stable.fastfetch
-     stable.zellij
-     stable.waybar
-     stable.vlc
-     stable.librewolf
-     stable.bitwarden
-     stable.oath-toolkit
+     gnome-disk-utility
+     fastfetch
+     discord
+     zellij
+     waybar
+     vlc
+     grim
+     steam
+     librewolf
+     bitwarden
+     oath-toolkit
      unstable.python3
-     stable.alsa-utils
-     stable.stow
-     stable.brightnessctl
+     alsa-utils
+     stow
+     brightnessctl
      unstable.firefox
      unstable.krita
-     stable.home-manager
-     stable.hyprpaper
-     stable.fish
+     home-manager
+     hyprpaper
+     fish
      unstable.hyprshot
-     stable.rustc
+     rustc
      unstable.zed-editor
-     stable.cargo
-     stable.river
+     cargo
+     river
      unstable.tor-browser
-     stable.fzf
-     stable.p7zip
-     stable.wl-clipboard
+     fzf
+     p7zip
+     wl-clipboard
      old.hyprland
-     stable.btop
+     btop
      unstable.anyrun
      unstable.ghostty
      unstable.neovim
-     stable.zoxide
-     stable.wireplumber
-     stable.pipewire
+     zoxide
+     wireplumber
+     pipewire
   ];
 
   fonts.packages = with pkgs; [
