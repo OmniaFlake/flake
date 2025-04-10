@@ -1,11 +1,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{config, pkgs, inputs, lib, ... }:
-let
-    unstable = inputs.unstablenixpkgs.legacyPackages.${pkgs.system};
-    old= inputs.veryoldnixpkgs.legacyPackages.${pkgs.system};
-in
+{config, pkgs, old_pkgs, unstable_pkgs, lib, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -13,7 +9,7 @@ in
     ];
   services.xserver.enable = true;
   programs.steam.enable = true;
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     
     # Intel-specific packages
@@ -66,57 +62,57 @@ in
   users.defaultUserShell = pkgs.fish;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-     vim
-     unstable.git
-     wofi
-     tmux
-     unstable.kitty
-     unstable.xfce.thunar
-     yazi
-     speechd
-     cmatrix
-     unstable.sway
-     unstable.foot
-     gnome-disk-utility
-     fastfetch
-     discord
-     zellij
-     waybar
-     vlc
-     grim
-     steam
-     librewolf
-     bitwarden
-     oath-toolkit
-     unstable.python3
-     alsa-utils
-     stow
-     brightnessctl
-     unstable.firefox
-     unstable.krita
-     home-manager
-     hyprpaper
-     fish
-     unstable.hyprshot
-     rustc
-     unstable.zed-editor
-     cargo
-     river
-     unstable.tor-browser
-     fzf
-     p7zip
-     wl-clipboard
-     old.hyprland
-     btop
-     unstable.anyrun
-     unstable.ghostty
-     unstable.neovim
-     zoxide
-     wireplumber
-     pipewire
+     pkgs.vim
+     unstable_pkgs.git
+     pkgs.wofi
+     pkgs.tmux
+     unstable_pkgs.kitty
+     unstable_pkgs.xfce.thunar
+     pkgs.yazi
+     pkgs.speechd
+     pkgs.cmatrix
+     unstable_pkgs.sway
+     unstable_pkgs.foot
+     unstable_pkgs.gnome-disk-utility
+     unstable_pkgs.fastfetch
+     pkgs.discord
+     pkgs.zellij
+     pkgs.waybar
+     pkgs.hyprland
+     pkgs.steam
+     pkgs.vlc
+     pkgs.grim
+     pkgs.librewolf
+     pkgs.bitwarden
+     pkgs.oath-toolkit
+     unstable_pkgs.python3
+     pkgs.alsa-utils
+     pkgs.stow
+     pkgs.brightnessctl
+     unstable_pkgs.firefox
+     unstable_pkgs.krita
+     pkgs.home-manager
+     pkgs.hyprpaper
+     pkgs.fish
+     unstable_pkgs.hyprshot
+     pkgs.rustc
+     unstable_pkgs.zed-editor
+     pkgs.cargo
+     pkgs.river
+     unstable_pkgs.tor-browser
+     pkgs.fzf
+     pkgs.p7zip
+     pkgs.wl-clipboard
+     pkgs.btop
+     unstable_pkgs.anyrun
+     unstable_pkgs.ghostty
+     unstable_pkgs.neovim
+     pkgs.zoxide
+     pkgs.wireplumber
+     pkgs.pipewire
   ];
 
   fonts.packages = with pkgs; [
