@@ -9,6 +9,14 @@
     ];
   services.xserver.enable = true;
   programs.steam.enable = true;
+  programs.hyprland  = {
+    enable  = true;
+    xwayland.enable = true;
+  };
+  programs.sway = {
+    enable = true;
+    xwayland.enable = true;
+  };
   hardware.graphics = {
     enable = true;
     
@@ -66,7 +74,9 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
      pkgs.vim
+     pkgs.gcc
      unstable_pkgs.git
+     pkgs.helix
      pkgs.wofi
      pkgs.tmux
      unstable_pkgs.kitty
@@ -78,6 +88,7 @@
      unstable_pkgs.foot
      unstable_pkgs.gnome-disk-utility
      unstable_pkgs.fastfetch
+     pkgs.i3
      pkgs.discord
      pkgs.zellij
      pkgs.waybar
