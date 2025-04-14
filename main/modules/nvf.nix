@@ -1,8 +1,5 @@
+{pkgs, lib,...}: 
 {
-  pkgs,
-  lib,
-  ...
-}: {
   vim = {
     theme = {
       enable = true;
@@ -10,4 +7,5 @@
       style = "dark";
     };
   };
+  telescope.enable = true;
 }
