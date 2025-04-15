@@ -3,9 +3,9 @@
   vim = {
     theme = {
       enable = true;
-      name = "gruvbox";
+      name = "dracula";
       style = "dark";
     };
+    telescope.enable = true;
   };
-  telescope.enable = true;
 }
