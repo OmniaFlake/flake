@@ -1,11 +1,35 @@
 {pkgs, lib,...}: 
 {
   vim = {
-    theme = {
+    autocomplete.nvim-cmp.enable = true;
+    globals = 
+    {
+      mapleader = " ";
+    };
+    theme = 
+    {
       enable = true;
       name = "dracula";
       style = "dark";
     };
-    telescope.enable = true;
+    telescope = 
+    {
+      enable = true;
+    };
+    languages = 
+    {
+      enableLSP = true;
+      enableTreesitter = true;
+      rust = 
+      {
+        enable = true;
+        lsp.enable = true;
+      };
+      nix = 
+      {
+        lsp.enable = true;
+      };
+
+    };
   };
 }
