@@ -2,6 +2,9 @@
 {
   vim = {
     autocomplete.nvim-cmp.enable = true;
+    ui.borders.plugins.which-key.enable = true;
+    ui.borders.plugins.which-key.style = "solid";
+
     filetree.neo-tree.enable = true;
     options = 
     {
