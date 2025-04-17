@@ -2,7 +2,7 @@
 {
   vim = {
     autocomplete.nvim-cmp.enable = true;
-    neo-tree.enable = true;
+    filetree.neo-tree.enable = true;
     options = 
     {
       tabstop = 2;
