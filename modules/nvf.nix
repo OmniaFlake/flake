@@ -2,6 +2,11 @@
 {
   vim = {
     autocomplete.nvim-cmp.enable = true;
+    neo-tree.enable = true;
+    options = 
+    {
+      tabstop = 2;
+    };
     globals = 
     {
       mapleader = " ";

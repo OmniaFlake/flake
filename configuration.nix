@@ -75,6 +75,7 @@
   #  wget
      pkgs.vim
      pkgs.gcc
+     pkgs.nodejs_20
      unstable_pkgs.git
      pkgs.helix
      pkgs.wofi
