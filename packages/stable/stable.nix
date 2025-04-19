@@ -1,0 +1,44 @@
+{pkgs, lib, ...}: 
+{
+  imports = [
+    ./programs/programs.nix
+  ];
+  environment.systemPackages = with pkgs;
+  [
+    vim
+    gcc
+    nodejs_20
+    helix
+    wofi
+    tmux
+    ripgrep
+    yazi
+    tree
+    speechd
+    cmatrix
+    ags
+    discord
+    zellij
+    waybar
+    hyprland
+    steam
+    vlc
+    grim
+    librewolf
+    bitwarden
+    oath-toolkit
+    alsa-utils
+    stow
+    brightnessctl
+    hyprpaper
+    fish
+    rustc
+    cargo
+    fzf
+    wl-clipboard
+    btop
+    zoxide
+    wireplumber
+    pipewire
+  ];
+}
