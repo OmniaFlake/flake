@@ -7,10 +7,13 @@
   [
     vim
     gcc
+    greetd.greetd
     nodejs_20
     helix
     wofi
     tmux
+    python312Packages.python-ly
+    sddm
     ripgrep
     yazi
     tree

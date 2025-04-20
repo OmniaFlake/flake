@@ -7,7 +7,6 @@
   [
     anyrun
     ghostty
-    nushell
     neovim
     tor-browser
     zed-editor

@@ -5,8 +5,9 @@
     description = "omnia";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.fish;
   };
-  users.defaultUserShell = pkgs.nushell;
+  users.defaultUserShell = pkgs.fish;
   networking.hostName = "nixos"; # Define your hostname.
 
 
