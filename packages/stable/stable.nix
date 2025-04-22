@@ -11,6 +11,7 @@
     nodejs_20
     helix
     wofi
+    p7zip
     tmux
     python312Packages.python-ly
     sddm
@@ -37,6 +38,7 @@
     fish
     rustc
     cargo
+    rust-analyzer-unwrapped
     fzf
     wl-clipboard
     btop

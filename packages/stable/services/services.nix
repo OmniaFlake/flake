@@ -3,7 +3,7 @@
   imports = 
   [
     ./xdg.nix
-    ./greetd.nix
+    ./sddm.nix
     ./xserver.nix
     ./flatpak.nix
   ];
