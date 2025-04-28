@@ -5,6 +5,7 @@
   [
     ./hyprland.nix
     ./fonts.nix
+    ./starship.nix
     ./fish.nix
     ./graphics.nix
     ./ssh.nix

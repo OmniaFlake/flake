@@ -16,6 +16,7 @@
     python312Packages.python-ly
     sddm
     ripgrep
+    starship
     yazi
     tree
     speechd

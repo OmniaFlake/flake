@@ -43,7 +43,7 @@
         }).neovim;
     };
 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.flake = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {
         inherit pkgs;

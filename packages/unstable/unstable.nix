@@ -6,6 +6,9 @@
   environment.systemPackages = with unstable_pkgs;
   [
     anyrun
+    rnote
+    cava
+    lapce
     ghostty
     neovim
     tor-browser

@@ -8,7 +8,7 @@
     shell = pkgs.fish;
   };
   users.defaultUserShell = pkgs.fish;
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "flake"; # Define your hostname.
 
 
 }

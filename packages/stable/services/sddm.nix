@@ -1,6 +1,6 @@
 {config, pkgs, lib, ...}:
 {
-  services.displayManager.sddm = {
+  services.xserver.displayManager.sddm = {
     enable = true;
     settings = {
       Autologin = {
@@ -9,6 +9,7 @@
       };
     wayland.enable = true;
     wayland.compositor = "Hyprland"
+    theme = "where_is_my_sddm_theme";
     };
 
   };
