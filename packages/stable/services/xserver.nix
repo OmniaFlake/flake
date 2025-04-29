@@ -5,7 +5,6 @@
     enable = true;
     xkb = {
       layout = "us";
-      varient = "";
 
     };
 

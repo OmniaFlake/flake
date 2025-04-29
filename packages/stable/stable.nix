@@ -2,6 +2,7 @@
 {
   imports = [
     ./programs/programs.nix
+    ./services/services.nix 
   ];
   environment.systemPackages = with pkgs;
   [
@@ -14,8 +15,6 @@
     p7zip
     tmux
     python312Packages.python-ly
-    sddm
-    ripgrep
     starship
     yazi
     tree
