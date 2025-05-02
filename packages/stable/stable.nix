@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs;
   [
     vim
+    ascii-image-converter
     gcc
     greetd.greetd
     nodejs_20

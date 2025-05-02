@@ -6,6 +6,7 @@
   environment.systemPackages = with unstable_pkgs;
   [
     anyrun
+    nh
     rnote
     cava
     lapce

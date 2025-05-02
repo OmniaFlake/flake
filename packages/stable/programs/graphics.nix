@@ -1,8 +1,8 @@
 
 {pkgs, lib, ...}:
 {
-  hardware.graphics = {
-    enable = true;
+        hardware.graphics = {
+                enable = true;
     
     # Intel-specific packages
     extraPackages = with pkgs; [

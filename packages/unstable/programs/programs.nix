@@ -3,6 +3,7 @@
   imports = 
   [
     ./git.nix
+    ./nh.nix
     ./sway.nix
   ];
 }
