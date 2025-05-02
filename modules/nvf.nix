@@ -6,7 +6,6 @@
     ui.borders.plugins.which-key.style = "solid";
     enableLuaLoader = true;
     filetree.neo-tree.enable = true;
-    utility.direnv.enable  =true;
 
     statusline = 
     {
