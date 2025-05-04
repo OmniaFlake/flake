@@ -33,16 +33,6 @@
       config.allowUnfree = true;
     };
   in {
-    packages.${system} = {
-      nvf =
-        (nvf.lib.neovimConfiguration {
-          inherit pkgs;
-          modules = [
-            ./modules/nvf.nix
-          ];
-        }).neovim;
-    };
-
     nixosConfigurations.flake = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {
