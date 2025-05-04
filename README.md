@@ -6,4 +6,4 @@ Unstable packages
 stable packages
 
 Tree
-![Tree](./tree.png)
+![](./tree.png)
