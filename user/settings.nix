@@ -1,9 +1,11 @@
-{config, unstable_pkgs, pkgs, lib, ...}:
+{config, unstable_pkgs, pkgs, lib, inputs, ...}:
 {
   imports = [
     ./user.nix
     ./boot.nix
   ];
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}"];
   nix.settings.experimental-features = ["nix-command" "flakes"];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # Configure network proxy if necessary
