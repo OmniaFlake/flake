@@ -5,26 +5,33 @@
   ];
   environment.systemPackages = with unstable_pkgs;
   [
-    anyrun
+    #nix
     nh
-    rnote
-    cava
-    lapce
+
+    #language
+    limbo
+    python3
+    
+    #dev_tools
     ghostty
+    foot 
+    kitty
+    lapce
     neovim
-    tor-browser
     zed-editor
+    git
+
+    #general
+    anyrun
+    sway
+    cava
+    tor-browser
     hyprshot
     krita
     firefox
-    python3
-    git
-    sway
-    foot
     gnome-disk-utility
-    fastfetch
     xfce.thunar
-    kitty
+    fastfetch
   ];
 
 

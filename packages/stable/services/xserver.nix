@@ -5,9 +5,7 @@
     enable = true;
     xkb = {
       layout = "us";
-
     };
-
   };
 
 }

@@ -4,26 +4,41 @@
     ./programs/programs.nix
     ./services/services.nix 
   ];
-  environment.systemPackages = with pkgs;
-  [
-    vim
-    ascii-image-converter
+  environment.systemPackages = with pkgs; [
+    # Nix
+
+
+    # Languages
     gcc
-    greetd.greetd
+    rustc
+    cargo
+    zig
     nodejs_20
+    
+    # Dev tools
+    vim
     helix
+    tmux
+    zellij
+    rust-analyzer-unwrapped
+    ripgrep
+    fzf
+    btop
+    
+    # General
+    chafa
+    tdf
+    ascii-image-converter
     wofi
     p7zip
-    tmux
-    python312Packages.python-ly
-    starship
     yazi
+    starship
+    stow
     tree
     speechd
     cmatrix
     ags
     discord
-    zellij
     waybar
     hyprland
     steam
@@ -33,18 +48,14 @@
     bitwarden
     oath-toolkit
     alsa-utils
-    stow
     brightnessctl
     hyprpaper
     fish
-    rustc
-    cargo
-    rust-analyzer-unwrapped
-    fzf
     wl-clipboard
-    btop
     zoxide
+    greetd.greetd
     wireplumber
     pipewire
   ];
+
 }
