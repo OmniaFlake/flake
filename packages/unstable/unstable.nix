@@ -9,7 +9,7 @@
     nh
 
     #language
-    limbo
+    sqlite
     python3
     
     #dev_tools

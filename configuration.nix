@@ -9,6 +9,7 @@
       ./packages/stable/stable.nix
       ./packages/unstable/unstable.nix
       ./user/settings.nix
+      ./systemd/systemd.nix
     ];
   system.stateVersion = "24.11"; # Did you read the comment?
 

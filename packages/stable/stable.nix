@@ -1,8 +1,9 @@
-{pkgs, lib, ...}: 
+{pkgs, inputs,  lib, ...}: 
 {
   imports = [
     ./programs/programs.nix
     ./services/services.nix 
+    ./custom.nix
   ];
   environment.systemPackages = with pkgs; [
     # Nix
@@ -14,6 +15,7 @@
     cargo
     zig
     nodejs_20
+
     
     # Dev tools
     vim
@@ -24,9 +26,12 @@
     ripgrep
     fzf
     btop
+    fish
+    zsh
     
     # General
     chafa
+    dotool
     tdf
     ascii-image-converter
     wofi
@@ -50,12 +55,10 @@
     alsa-utils
     brightnessctl
     hyprpaper
-    fish
     wl-clipboard
     zoxide
     greetd.greetd
     wireplumber
     pipewire
   ];
-
 }

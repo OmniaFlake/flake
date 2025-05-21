@@ -6,10 +6,11 @@
     ./hyprland.nix
     ./fonts.nix
     ./starship.nix
-    ./fish.nix
+    ./shell.nix
     ./graphics.nix
     ./ssh.nix
     ./steam.nix
+    ./xwayland.nix 
   ];
 
 }
