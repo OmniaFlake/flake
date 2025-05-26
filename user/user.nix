@@ -5,9 +5,8 @@
     description = "omnia";
     extraGroups = [ "networkmanager" "ydotool" "wheel"];
     packages = with pkgs; [];
-    shell = pkgs.zsh;
   };
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.fish;
   networking.hostName = "flake"; # Define your hostname.
 
 
