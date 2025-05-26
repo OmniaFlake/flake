@@ -3,7 +3,7 @@
   users.users.omnia = {
     isNormalUser = true;
     description = "omnia";
-    extraGroups = [ "networkmanager" "wheel"];
+    extraGroups = [ "networkmanager" "ydotool" "wheel"];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };

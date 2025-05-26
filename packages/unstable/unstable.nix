@@ -11,6 +11,7 @@
     #language
     sqlite
     python3
+    zig
     
     #dev_tools
     ghostty

@@ -13,7 +13,7 @@
     gcc
     rustc
     cargo
-    zig
+    go
     nodejs_20
 
     
@@ -32,6 +32,7 @@
     # General
     chafa
     dotool
+    ydotool
     tdf
     ascii-image-converter
     wofi

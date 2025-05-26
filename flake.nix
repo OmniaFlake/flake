@@ -2,7 +2,7 @@
   description = "My Flake System Configurations";
   inputs = {
     unstablenixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     veryoldnixpkgs.url = "github:nixos/nixpkgs?ref=nixos-23.11";
     nvf.url = "github:OmniaFlake/nvf";
     mytmux_helper.url  = "github:OmniaFlake/mytmux_helper";
