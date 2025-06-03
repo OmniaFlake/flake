@@ -3,6 +3,7 @@
   imports = [
     ./user.nix
     ./boot.nix
+    ./security.nix
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}"];
@@ -13,6 +14,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
  # Enable networking
   networking.networkmanager.enable = true;
+
   # Set your time zone.
   time.timeZone = "Asia/Kathmandu";
   hardware.pulseaudio.enable = false;

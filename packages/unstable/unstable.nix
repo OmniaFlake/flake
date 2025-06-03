@@ -30,8 +30,8 @@
     hyprshot
     krita
     firefox
-    gnome-disk-utility
     xfce.thunar
+    gnome-disk-utility
     fastfetch
   ];
 
