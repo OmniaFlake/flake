@@ -1,10 +1,7 @@
 {pkgs, inputs,  lib, ...}: 
 {
-  imports = [
-    ./programs/programs.nix
-    ./services/services.nix 
-    ./custom.nix
-  ];
+
+  imports = [ ./custom.nix ];
   environment.systemPackages = with pkgs; [
     # Nix
 
@@ -28,11 +25,14 @@
     btop
     fish
     zsh
+    docker
     
     # General
     chafa
-    dotool
+    browsh
+    xorg.xhost
     ydotool
+    gh
     tdf
     ascii-image-converter
     wofi

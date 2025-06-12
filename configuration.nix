@@ -8,8 +8,10 @@
       ./hardware-configuration.nix
       ./packages/stable/stable.nix
       ./packages/unstable/unstable.nix
-      ./user/settings.nix
+      ./settings/settings.nix
       ./systemd/systemd.nix
+      ./services/services.nix 
+      ./programs/programs.nix 
     ];
   system.stateVersion = "24.11"; # Did you read the comment?
 

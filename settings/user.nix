@@ -3,7 +3,7 @@
   users.users.omnia = {
     isNormalUser = true;
     description = "omnia";
-    extraGroups = [ "uinput" "networkmanager" "ydotool" "wheel" "input"];
+    extraGroups = ["docker" "networkmanager" "ydotool" "wheel" "input"];
     packages = with pkgs; [];
   };
   users.defaultUserShell = pkgs.fish;

@@ -1,8 +1,5 @@
 {unstable_pkgs, lib, ...}:
 {
-  imports = [
-    ./programs/programs.nix
-  ];
   environment.systemPackages = with unstable_pkgs;
   [
     #nix
@@ -18,11 +15,13 @@
     foot 
     kitty
     lapce
+    flow-control
     neovim
     zed-editor
     git
 
     #general
+    brave
     anyrun
     sway
     cava

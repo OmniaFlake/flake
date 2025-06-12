@@ -4,6 +4,7 @@
     ./user.nix
     ./boot.nix
     ./security.nix
+    ./virtualization.nix
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}"];
@@ -13,8 +14,12 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
  # Enable networking
-  networking.networkmanager.enable = true;
-
+  networking = {
+    networkmanager.enable = true;
+    firewall = {
+      enable = true;
+    };
+  };
   # Set your time zone.
   time.timeZone = "Asia/Kathmandu";
   hardware.pulseaudio.enable = false;
