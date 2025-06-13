@@ -26,6 +26,9 @@
     fish
     zsh
     docker
+    podman
+    podman-tui
+    podman-desktop
     
     # General
     chafa
@@ -43,7 +46,6 @@
     tree
     speechd
     cmatrix
-    ags
     discord
     waybar
     hyprland
