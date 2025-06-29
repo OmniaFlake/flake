@@ -34,10 +34,15 @@
     chafa
     browsh
     xorg.xhost
+    mangojuice
     ydotool
     gh
+    unrar
     tdf
+    genymotion
     ascii-image-converter
+    pavucontrol
+    pamixer
     wofi
     p7zip
     yazi
@@ -50,6 +55,7 @@
     waybar
     hyprland
     steam
+    mangohud
     vlc
     grim
     librewolf
