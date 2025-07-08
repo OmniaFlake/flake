@@ -35,11 +35,15 @@
     browsh
     xorg.xhost
     mangojuice
+    nvitop
+    qbittorrent
+    pciutils
+    glxinfo
+    lm_sensors
     ydotool
     gh
     unrar
-    tdf
-    genymotion
+    mission-center
     ascii-image-converter
     pavucontrol
     pamixer
