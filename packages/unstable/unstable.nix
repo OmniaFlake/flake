@@ -15,7 +15,6 @@
     foot 
     kitty
     lapce
-    flow-control
     neovim
     zed-editor
     git

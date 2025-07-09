@@ -11,7 +11,6 @@
       ./shell.nix
       ./ssh.nix
       ./starship.nix
-      ./steam.nix
       ./sway.nix
       ./xwayland.nix
     ];

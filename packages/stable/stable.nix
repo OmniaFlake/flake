@@ -5,14 +5,10 @@
   environment.systemPackages = with pkgs; [
     # Nix
 
-
     # Languages
     gcc
-    rustc
     cargo
     go
-    nodejs_20
-
     
     # Dev tools
     vim
@@ -25,25 +21,15 @@
     btop
     fish
     zsh
-    docker
     podman
     podman-tui
     podman-desktop
     
     # General
     chafa
-    browsh
-    xorg.xhost
-    mangojuice
-    nvitop
     qbittorrent
-    pciutils
-    glxinfo
-    lm_sensors
     ydotool
-    gh
     unrar
-    mission-center
     ascii-image-converter
     pavucontrol
     pamixer
@@ -58,8 +44,6 @@
     discord
     waybar
     hyprland
-    steam
-    mangohud
     vlc
     grim
     librewolf
